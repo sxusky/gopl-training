@@ -35,7 +35,7 @@ func downloadMoviePoster(year string, title string) {
 		log.Fatal(err)
 	}
 	if result.Response == "True" {
-		filename := year + "." + strings.Replace(title, " ", "_", -1) + ".jpg"
+		filename := strings.Replace(title, " ", "_", -1) + "." + year + ".jpg"
 		if err := download(result.Poster, filename); err != nil {
 			log.Fatal(err)
 		}
