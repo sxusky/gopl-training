@@ -41,8 +41,8 @@ func main() {
 
 }
 
-func printIssues(issues, []*github.Issue) {
-	for _, item := range result.Items {
+func printIssues(issues []*github.Issue) {
+	for _, item := range issues {
 		fmt.Printf("#%-5d %9.9s %.55s\n",
 			item.Number, item.User.Login, item.Title)
 	}
